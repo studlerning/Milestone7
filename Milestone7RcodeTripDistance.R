@@ -1,0 +1,12 @@
+taxi <- read_csv("jan30_2019_yellow_taxi (1).csv")
+View(taxi)
+xbar <- mean(taxi$trip_distance)
+s <- sd(taxi$trip_distance)
+n <- 24308
+t <- -qt(0.025, n-1)
+xbar - t*s/sqrt(n)
+xbar + t*s/sqrt(n)
+z <- qnorm(0.975)
+xbar - z*s/sqrt(n)
+xbar - z*s/sqrt(n)
+xbar + z*s/sqrt(n)

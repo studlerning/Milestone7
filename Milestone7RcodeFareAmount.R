@@ -1,0 +1,12 @@
+taxi <- read_csv("jan30_2019_yellow_taxi (1).csv")
+View(taxi)
+xbar <- mean(taxi$fare_amount)
+s <- sd(taxi$fare_amount)
+n <- 24308
+t <- -qt(0.025, n-1)
+xbar - t*s/sqrt(n)
+xbar + t*s/sqrt(n)
+z <- qnorm(0.975)
+xbar - z*s/sqrt(n)
+xbar - z*s/sqrt(n)
+xbar + z*s/sqrt(n)
